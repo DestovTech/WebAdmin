@@ -1,0 +1,35 @@
+.transaction {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+
+  .transaction_title {
+    // flex: 1;
+    margin-bottom: 0.4rem;
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    .transaction_icon {
+      color: gold;
+    }
+  }
+
+  .transaction_details_container {
+    display: flex;
+    // flex: 1;
+    flex-direction: column;
+    gap: 1px;
+
+    .transaction_detail {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 500;
+
+      .transaction_type {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}

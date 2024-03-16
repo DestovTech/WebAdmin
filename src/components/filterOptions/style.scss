@@ -1,0 +1,69 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.userListDropdown,
+.userFilterDropdown {
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 4px 0 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 8.5rem;
+    font-size: 13px;
+    font-weight: 600;
+    color: $dark-color;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  select option {
+    text-align: center;
+    background-color: #fff;
+    color: $dark-color;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 15px;
+    // height: fit-content;
+
+    @include md {
+      font-size: 8px;
+      font-weight: 500;
+    }
+  }
+}
+
+.userFilterDropdown {
+  .filterOptions {
+    position: relative;
+
+    .filter_icon {
+      color: $dark-color;
+      position: absolute;
+      top: 2px;
+      left: 4px;
+    }
+
+    select {
+      width: 7.6rem;
+    }
+  }
+}
+
+.userListDropdown {
+  .listOptions {
+    position: relative;
+
+    .list_icon {
+      position: absolute;
+      color: $dark-color;
+      top: 2px;
+      left: 4px;
+    }
+  }
+}

@@ -1,0 +1,206 @@
+@import "../../styles/responsive.scss";
+@import "../../styles/variables.scss";
+
+.status {
+  font-size: 0.75rem;
+  //   font-weight: 500;
+  .pending {
+    color: rgb(207, 207, 6);
+    border: 1px solid rgb(223, 223, 11);
+    background-color: rgb(254, 254, 242);
+    padding: 3px 5px;
+    border-radius: 3px;
+  }
+  .rejected {
+    color: red;
+    background: rgb(254, 230, 230);
+    border: 1px solid red;
+    border-radius: 3px;
+    padding: 3px 5px;
+  }
+  .accepted {
+    color: green;
+    background: rgb(222, 253, 222);
+    border: 1px solid green;
+    border-radius: 3px;
+    padding: 3px 5px;
+  }
+}
+
+.status_icon {
+  img {
+    cursor: pointer;
+  }
+
+  .pending_status {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+  }
+}
+
+//edit page
+.edit_status {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.724);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  overflow-x: hidden;
+
+  .modal {
+    width: 25%;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: aliceblue;
+    color: black;
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    @include lg {
+      width: 40%;
+    }
+
+    @include sm {
+      width: 80%;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      select {
+        // appearance: none;
+        border: 1px solid $soft-color;
+        border-radius: 3px;
+        padding: 8px;
+        outline: none;
+        cursor: pointer;
+      }
+
+      button {
+        padding: 8px;
+        border: none;
+        background: blueviolet;
+        color: white;
+        outline: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          background: #000;
+        }
+      }
+    }
+  }
+}
+
+.manualReq {
+  .manualReq_header {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .date-picker-container {
+      position: relative;
+
+      .date-pic {
+        display: flex;
+
+        .datePicker {
+          padding: 8px 3px;
+          width: 6.2rem;
+          font-size: 0.75rem;
+          font-weight: 600;
+          color: rgb(80, 76, 76);
+          border: 1px solid rgb(169, 160, 160);
+          border-radius: 3px;
+          outline: none;
+        }
+
+        .calendar {
+          position: absolute;
+          left: 5rem;
+          top: 0.4rem;
+          z-index: 1;
+          color: black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .manual_option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: end;
+    margin-bottom: 1rem;
+    label {
+      font-size: 0.875rem;
+    }
+    .manual_option_input {
+      position: relative;
+
+      .filter_icon {
+        color: $dark-color;
+        position: absolute;
+        top: 7px;
+        right: 4px;
+      }
+      .select_filter_option {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding: 8px 4px 8px 8px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        background-color: #fff;
+        cursor: pointer;
+        width: 6.8rem;
+        font-size: 13px;
+        font-weight: 500;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .filter_option {
+        // text-align: center;
+        background-color: #fff;
+        color: $dark-color;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 15px;
+        // height: fit-content;
+
+        @include md {
+          font-size: 8px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

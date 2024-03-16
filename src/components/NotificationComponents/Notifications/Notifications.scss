@@ -1,0 +1,80 @@
+@import "../../../styles/responsive.scss";
+
+.notifications {
+  .notifications_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    .add_notification {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 10px;
+      background: rgb(18, 18, 63);
+      border-radius: 10px;
+      font-size: 0.875rem;
+      cursor: pointer;
+
+      span {
+        @include xsm {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .notifications_container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    background: white;
+    color: black;
+    gap: 1rem;
+    padding: 20px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border-left: 14px solid rgb(18, 18, 63);
+
+    @include sm {
+      border-left: 10px solid rgb(18, 18, 63);
+      padding: 20px 10px;
+    }
+
+    .notifications_title {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+
+      h3 {
+        @include sm {
+          font-size: 0.875rem;
+        }
+
+        @include xsm {
+          font-size: 0.8rem;
+        }
+      }
+
+      p {
+        font-weight: 400;
+        color: gray;
+        font-size: 0.875rem;
+
+        @include sm {
+          font-size: 0.7rem;
+        }
+      }
+    }
+
+    .notifications_content {
+      @include sm {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

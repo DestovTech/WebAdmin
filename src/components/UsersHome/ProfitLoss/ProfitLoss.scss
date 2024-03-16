@@ -1,0 +1,68 @@
+.profit_loss_container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 1;
+
+  .profit_loss_title {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .date-picker-container {
+      position: relative;
+
+      .date-pic {
+        display: flex;
+
+        .datePicker {
+          padding: 5px 3px;
+          width: 4.2rem;
+          font-size: 0.53rem;
+          font-weight: 500;
+          color: rgb(80, 76, 76);
+          border: 1px solid rgb(169, 160, 160);
+          border-radius: 3px;
+          outline: none;
+        }
+
+        .calendar {
+          position: absolute;
+          left: 3.3rem;
+          top: 0.3rem;
+          z-index: 1;
+          font-size: small;
+          color: black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .profit {
+    flex: 1;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .neutral_icon,
+  .profit_icon,
+  .loss_icon {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .neutral_icon {
+    color: gold;
+  }
+  .profit_icon {
+    color: green;
+  }
+  .loss_icon {
+    color: rgb(190, 68, 2);
+  }
+}

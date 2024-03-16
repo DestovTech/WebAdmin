@@ -1,0 +1,121 @@
+@import "../../../styles/responsive.scss";
+
+.bid_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  h2 {
+    @include sm {
+      font-size: 1.2rem;
+    }
+    @include xsm {
+      font-size: 1rem;
+    }
+    span {
+      font-size: 0.8rem;
+      font-weight: 500;
+
+      @include xsm {
+        font-size: 0.7rem;
+      }
+    }
+  }
+  h4 {
+    @include sm {
+      font-size: 1rem;
+    }
+    @include xsm {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.back_button {
+  background: black !important;
+  padding: 5px 10px !important;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: all 0.3s;
+
+  &:hover {
+    background: #fff !important;
+    color: black !important;
+  }
+}
+
+.particular_game_data {
+  background-image: linear-gradient(to right, #0099f7, #f11712);
+  padding: 20px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  width: 25rem;
+  @include sm {
+    width: 100%;
+  }
+
+  .game_data_title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .transaction_icon {
+      color: gold;
+      font-size: 1.5rem;
+    }
+  }
+
+  .particular_game_data_list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .particular_game_data_name {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .particular_game_data_amount {
+      margin-left: auto;
+    }
+  }
+
+  .total_points {
+    .total {
+      font-weight: 800;
+    }
+    font-weight: 800;
+  }
+}
+
+.copy_button {
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 auto;
+  width: fit-content;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  font-weight: 500;
+  background: rgb(18, 18, 63);
+  color: #fff;
+  transition: all 0.3s;
+  &:hover {
+    background: #000;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}

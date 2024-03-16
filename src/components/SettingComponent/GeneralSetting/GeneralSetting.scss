@@ -1,0 +1,147 @@
+@import "../../../styles/responsive.scss";
+
+.general_setting {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  align-content: start;
+
+  @include xl {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include sm {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .bonus_container,
+  .refer_container,
+  .withdraw_container,
+  .withdrawTiming_container,
+  .bid_container {
+    align-content: start;
+
+    align-self: flex-start; // Align the container at the start
+    max-height: 100%; //
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: #fff;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+
+    h4 {
+      //   margin-bottom: 2rem;
+      color: gray;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+
+      @include sm {
+        margin-top: 1rem;
+      }
+
+      .input_form {
+        position: relative;
+        width: 100%;
+        label {
+          font-size: 0.65rem;
+          color: gray;
+          position: absolute;
+          top: -7px;
+          z-index: 555;
+          left: 10px;
+          background-color: white;
+        }
+        input {
+          padding: 12px;
+          border: 1px solid rgb(216, 206, 206);
+          outline: none;
+          border-radius: 3px;
+          font-size: 0.8rem;
+          width: 100%;
+        }
+        textarea {
+          padding: 12px;
+          border: 1px solid rgb(216, 206, 206);
+          outline: none;
+          border-radius: 3px;
+          font-size: 0.7rem;
+          width: 100%;
+          resize: none;
+          text-align: center;
+
+          @include lg {
+            font-size: 0.7rem;
+          }
+        }
+      }
+
+      button {
+        padding: 12px;
+        border: none;
+        color: #fff;
+        background: rgb(116, 20, 206);
+        outline: none;
+        font-size: 0.75rem;
+        font-weight: 400;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          background: #000;
+        }
+      }
+    }
+  }
+
+  .refer_container {
+    grid-row: span 2;
+    grid-column: span 2;
+
+    @include lg {
+      grid-column: span 2;
+    }
+
+    @include xl {
+      grid-row: span 1;
+    }
+
+    @include md {
+      order: 1;
+    }
+    @include sm {
+      grid-column: span 1;
+      order: 0;
+    }
+  }
+
+  .withdraw_container {
+    grid-row: span 1;
+
+    @include md {
+      order: 0;
+    }
+
+    .withdraw_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h4 {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

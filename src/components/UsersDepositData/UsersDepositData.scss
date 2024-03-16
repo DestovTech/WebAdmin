@@ -1,0 +1,273 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.dataTable_Usersdeposit {
+  .dataGrid_Usersdeposit {
+    background-color: white;
+    padding: 15px;
+    width: 82.5vw;
+
+    @include md {
+      padding: 10px;
+      width: auto;
+    }
+
+    .MuiDataGrid-cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .MuiDataGrid-columnHeaderDraggableContainer {
+    background-color: rgb(250, 169, 18);
+    height: 2.5rem !important;
+    border-radius: 3px;
+
+    text-align: center;
+    // padding-left: 12px;
+
+    .MuiDataGrid-columnHeaderTitleContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .MuiDataGrid-columnHeaderTitle {
+        font-weight: 600;
+      }
+
+      .MuiDataGrid-iconButtonContainer {
+        display: none;
+      }
+    }
+
+    .MuiDataGrid-menuIcon {
+      display: none;
+    }
+  }
+
+  .MuiDataGrid-toolbarContainer {
+    flex-direction: row-reverse;
+
+    @include sm {
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+  }
+
+  //   .MuiFormControl-root {
+  //     display: none;
+  //   }
+}
+
+.bidPhone_column {
+  justify-content: flex-start !important;
+  padding-left: 1.3rem !important;
+}
+
+@include md {
+  .MuiDataGrid-filterForm {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start;
+  }
+}
+
+.add_points {
+  color: rgb(18, 191, 133);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.usersDeposit {
+  margin-top: 1rem;
+  .usersdeposit_header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    .usersDeposit_title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .transaction_icon {
+        color: gold;
+      }
+    }
+
+    .date-picker-container {
+      position: relative;
+
+      .date-pic {
+        display: flex;
+
+        .datePicker {
+          padding: 8px 3px;
+          width: 6.2rem;
+          font-size: 0.75rem;
+          font-weight: 600;
+          color: rgb(80, 76, 76);
+          border: 1px solid rgb(169, 160, 160);
+          border-radius: 3px;
+          outline: none;
+        }
+
+        .calendar {
+          position: absolute;
+          left: 5rem;
+          top: 0.4rem;
+          z-index: 1;
+          color: black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .deposit_dashboard {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    @include sm {
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .usersTotalDeposit,
+    .usersTotalDeposit1 {
+      padding: 20px;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      border: none;
+      width: 20rem;
+      min-height: 150px;
+      background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+      display: flex;
+      flex-direction: column;
+
+      @include sm {
+        width: 100%;
+      }
+      .total_deposit_title {
+        flex: 1;
+      }
+
+      .total_deposit {
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+        gap: 0.5rem;
+        // justify-content: flex-start;
+
+        .amount {
+          font-size: 1.8rem;
+          font-weight: 700;
+        }
+
+        .users_involve {
+          font-size: 0.8rem;
+          font-weight: 300;
+        }
+      }
+
+      .money_icon {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        .deposit_image {
+          height: 40px;
+          width: 40px;
+        }
+      }
+    }
+
+    .usersTotalDeposit1 {
+      background: linear-gradient(to right, #0099f7, #f11712);
+
+      .total_deposit_title1 {
+        margin-bottom: 1.5rem;
+      }
+
+      .total_deposit1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.3rem;
+
+        .deposit_type {
+          font-weight: 600;
+        }
+
+        .deposit_amount {
+          display: flex;
+          align-items: end;
+          gap: 4px;
+
+          .users_size {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+
+  .payment-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: end;
+    margin-bottom: 1rem;
+    label {
+      font-size: 0.875rem;
+    }
+    .payment-option_input {
+      position: relative;
+
+      .filter_icon {
+        color: $dark-color;
+        position: absolute;
+        top: 2px;
+        left: 4.2rem;
+      }
+      .select_filter_option {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        padding: 4px 0 4px 4px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        background-color: #fff;
+        cursor: pointer;
+        width: 5.5rem;
+        font-size: 13px;
+        font-weight: 500;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .filter_option {
+        // text-align: center;
+        background-color: #fff;
+        color: $dark-color;
+        font-size: 13px;
+        font-weight: 500;
+        border-radius: 15px;
+        // height: fit-content;
+
+        @include md {
+          font-size: 8px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

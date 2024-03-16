@@ -1,0 +1,110 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.menu {
+  // .hamburger {
+  //   display: none;
+
+  //   @include md {
+  //     display: block;
+  //     font-size: 25px;
+  //     // margin-right: 3px;
+  //     // font-weight: bold;
+  //   }
+  //}
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    @include md {
+      display: none;
+    }
+
+    .title {
+      font-size: 12px;
+      font-weight: 200;
+      color: $soft-color;
+      text-transform: uppercase;
+
+      @include lg {
+        display: none;
+      }
+    }
+
+    .listItem {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      justify-content: flex-start;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: rgb(41, 1, 79);
+      }
+
+      .listItemTitle {
+        font-size: 0.875rem;
+        @include lg {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.temp_menu_drawer {
+  width: 250px;
+  padding: 5px 20px;
+  // height: 100%;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    .title {
+      font-size: 15px;
+      font-weight: 400;
+      color: rgb(41, 39, 39);
+      text-transform: uppercase;
+      font-family: "Inter", sans-serif;
+    }
+
+    .listItem {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 10px;
+      border-radius: 5px;
+
+      &:hover {
+        background-color: $soft-bg;
+      }
+
+      .listItem_icon {
+        background-color: black;
+        padding: 0.5rem;
+        border-radius: 15px;
+      }
+
+      .listItemTitle {
+        font-size: 1rem;
+        font-weight: 600;
+        font-family: "Inter", sans-serif;
+      }
+    }
+  }
+}
+
+.menuDrawer {
+  display: none;
+
+  @include md {
+    display: initial;
+  }
+}

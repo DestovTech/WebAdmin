@@ -1,0 +1,90 @@
+@import "./variables.scss";
+@import "./responsive.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar for Webkit/Blink */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main {
+  font-family: "Inter", sans-serif !important;
+  background: url("/bg.svg");
+  background-size: cover; /* Adjust as needed */
+  background-repeat: no-repeat; /* Adjust as needed */
+  transition: background 0.2s linear;
+  color: $main-color;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sub_main {
+  background: rgb(2, 41, 73);
+}
+
+.container {
+  flex: 1;
+  display: flex;
+}
+
+.menuContainer {
+  width: 12rem;
+  padding: 5px 5px 5px 15px;
+  border-right: 1px solid $dark-bg;
+  // align-self: stretch; // Ensure it takes full height
+  flex-shrink: 0; // Prevent shrinking
+
+  @include lg {
+    width: max-content;
+  }
+
+  @include md {
+    width: 0;
+    border-right: none;
+    padding: 0;
+  }
+}
+
+.sub_menuContainer {
+  border-right: 1px solid $soft-color;
+}
+
+.main_navbar {
+  display: flex;
+  align-items: center;
+}
+
+.menu_drawer {
+  padding-left: 1rem;
+}
+
+.contentContainer {
+  padding: 5px 15px;
+  width: 100%;
+}
+
+.no-data {
+  background: transparent;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .no-data-img {
+    height: 300px;
+    border-radius: 50%;
+  }
+}

@@ -1,0 +1,41 @@
+@import "../../../styles/responsive.scss";
+
+.permission_container {
+  background: #fff;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  //   width: fit-content;
+  padding: 1rem;
+  border-radius: 5px;
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    span {
+      font-size: 0.9rem;
+      font-weight: 400;
+      text-transform: capitalize;
+    }
+  }
+
+  .permissions {
+    display: flex;
+    align-items: center;
+    padding: 0 4rem;
+
+    @include sm {
+      padding: 0 1rem;
+    }
+
+    h4 {
+      color: rgb(136, 126, 126);
+      font-weight: 500;
+    }
+
+    .switch {
+      margin-left: auto;
+    }
+  }
+}

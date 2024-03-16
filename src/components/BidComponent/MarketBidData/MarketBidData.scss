@@ -1,0 +1,155 @@
+@import "../../../styles/responsive.scss";
+@import "../../../styles/variables.scss";
+
+.bidData {
+  .bidData_header {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .date-picker-container {
+      position: relative;
+
+      .date-pic {
+        display: flex;
+
+        .datePicker {
+          padding: 8px 3px;
+          width: 6.2rem;
+          font-size: 0.75rem;
+          font-weight: 600;
+          color: rgb(80, 76, 76);
+          border: 1px solid rgb(169, 160, 160);
+          border-radius: 3px;
+          outline: none;
+        }
+
+        .calendar {
+          position: absolute;
+          left: 5rem;
+          top: 0.4rem;
+          z-index: 1;
+          color: black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .usersTotalBid {
+    padding: 20px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: none;
+    width: 20rem;
+    min-height: 150px;
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    display: flex;
+    flex-direction: column;
+
+    @include sm {
+      width: 100%;
+    }
+    .total_bid_title {
+      flex: 1;
+    }
+
+    .total_bid {
+      flex: 1;
+
+      .amount {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+    }
+
+    .money_icon {
+      display: flex;
+      flex: 1;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      .deposit_image {
+        height: 40px;
+        width: 40px;
+      }
+    }
+  }
+
+  .bidDataList {
+    background: #fff;
+    ul {
+      padding: 0;
+      list-style: none;
+
+      .noData {
+        background: transparent;
+      }
+
+      .header_li {
+        background: #000;
+      }
+
+      li {
+        text-decoration: none;
+        border-bottom: 1px solid black;
+        text-align: center;
+
+        .header,
+        .bidDataDetails {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          color: black;
+
+          p {
+            flex: 1;
+            padding: 1rem 0;
+
+            @include sm {
+              &:first-child {
+                flex: 2;
+              }
+
+              font-size: 0.8rem;
+            }
+          }
+        }
+
+        .header {
+          font-size: 1rem;
+          font-weight: 600;
+          color: white;
+        }
+
+        .bidDataDetails {
+          .gameName {
+            @include sm {
+              font-size: 0.875rem;
+            }
+          }
+          .openTotal,
+          .marketTotal {
+            background: rgb(242, 203, 209);
+            cursor: pointer;
+          }
+          .closeTotal {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  .no-data {
+    background: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .no-data-img {
+      height: 300px;
+    }
+  }
+}

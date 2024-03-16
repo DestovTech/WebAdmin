@@ -1,0 +1,82 @@
+@import "../../styles/responsive.scss";
+
+.gameSetting {
+  .gameSetting_btn {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1rem;
+
+    @include md {
+      justify-content: flex-end;
+    }
+    .btn {
+      padding: 15px 30px;
+      background: white;
+      color: black;
+      border: none;
+      outline: none;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .open,
+    .close {
+      background: #000;
+      color: white;
+    }
+  }
+
+  .open_games {
+    background: white;
+    margin-top: 1rem;
+    width: fit-content;
+    // margin: 0 auto;
+    margin-top: 1rem;
+    padding: 30px;
+    border-radius: 3px;
+
+    @include md {
+      width: auto;
+    }
+
+    p {
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: gray;
+    }
+
+    ul {
+      padding: 10px;
+
+      li {
+        display: flex;
+        text-decoration: none;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10rem;
+
+        @include md {
+          gap: 6rem;
+        }
+
+        @include sm {
+          gap: auto;
+        }
+
+        span {
+          color: #000;
+          font-size: 0.875rem;
+          font-weight: 600;
+        }
+        .switch {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../styles/responsive.scss";
+
+.gameRateGrid {
+  width: 43vw !important;
+
+  @include lg {
+    width: 60vw !important;
+  }
+  @include md {
+    width: auto !important;
+  }
+}
+
+.gameRate_details {
+  h1 {
+    margin-bottom: 1rem;
+  }
+}
+
+.gameName {
+  font-weight: 600;
+  font-size: 0.875rem;
+}

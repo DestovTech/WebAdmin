@@ -1,0 +1,111 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.add {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.724);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  overflow-x: hidden;
+
+  .modal {
+    width: 40%;
+    padding: 50px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    color: black;
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    @include md {
+      width: 80%;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .title-card {
+      margin-bottom: 3rem;
+      font-size: 24px;
+      font-weight: 800;
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      @include sm {
+        font-size: 22px;
+      }
+
+      .withdraw_img {
+        height: 35px;
+        width: 35px;
+      }
+    }
+
+    form {
+      display: flex;
+      max-width: 500px;
+
+      @include md {
+        flex-direction: column;
+      }
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 1.2rem;
+
+        label {
+          font-size: 16px;
+        }
+
+        input {
+          padding: 10px;
+          background: transparent;
+          color: black;
+          border: 1px solid $soft-color;
+          outline: none;
+          border-radius: 3px;
+
+          @include md {
+            width: 100%;
+          }
+        }
+      }
+      .withdraw-btn {
+        width: 100%;
+        background: #259a29;
+        color: white;
+        font-weight: 600;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          background: black;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+/* Apply transition when the modal is closing */
+.add.closed .modal {
+  opacity: 0;
+}

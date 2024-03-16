@@ -1,0 +1,129 @@
+@import "../../../styles/responsive.scss";
+
+.gamePlay_users {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
+
+  .gamePlayer_noData {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    img {
+      height: 180px;
+      border-radius: 50%;
+    }
+  }
+
+  .users_list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    max-height: 250px;
+    width: 100%;
+    overflow-y: scroll;
+
+    .users_game_data_container {
+      width: 100%;
+
+      @include sm {
+        min-width: 480px;
+        // overflow-x: scroll;
+      }
+      .bottom_border {
+        width: 100%;
+        border: 1px solid gainsboro;
+        margin-top: 1rem;
+      }
+
+      .users_game_data {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        .game_data {
+          flex: 1;
+          font-size: 0.8rem;
+          display: flex;
+          flex-direction: column;
+
+          .games-list {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            list-style-type: none;
+            padding: 0;
+
+            li {
+              font-size: 0.75rem;
+              text-align: center;
+              // border: 1px solid #f0f0f0;
+              background: linear-gradient(
+                to right,
+                rgb(19, 19, 237),
+                rgb(6, 6, 188)
+              );
+
+              padding: 8px;
+              border-radius: 5px;
+              width: 100%;
+
+              .games_array {
+                font-size: 0.65rem;
+                margin-top: 8px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px;
+              }
+            }
+          }
+        }
+
+        .user_data {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 15px;
+
+          .user_img_icon {
+            height: 25px;
+            width: 25px;
+          }
+
+          .user_detail {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+              color: rgb(240, 157, 2);
+            }
+
+            .users_name {
+              font-size: 0.8rem;
+              text-transform: capitalize;
+            }
+
+            .user_phone {
+              font-size: 0.6rem;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}

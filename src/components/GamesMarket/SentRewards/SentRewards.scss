@@ -1,0 +1,323 @@
+@import "../../../styles/responsive.scss";
+
+.rewards {
+  margin-top: 1rem;
+  .rewards_container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+
+    @include sm {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    label {
+      font-size: 1rem;
+    }
+
+    input {
+      padding: 8px;
+      border-radius: 3px;
+      outline: none;
+      border: none;
+      @include sm {
+        width: 100%;
+        text-align: center;
+        font-size: 0.9rem;
+      }
+    }
+
+    button {
+      padding: 8px;
+      margin: 0;
+      border-radius: 3px;
+      outline: none;
+      border: none;
+      background: blueviolet;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 500;
+
+      &:hover {
+        background-color: #000;
+      }
+
+      @include sm {
+        width: 100%;
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .winning_users_container {
+    background: #fff;
+    color: #000;
+    border-radius: 3px;
+    padding: 10px;
+
+    @include md {
+      padding: 10px;
+    }
+
+    .header_winners {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      button {
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        margin: 0;
+        border-radius: 3px;
+        outline: none;
+        border: none;
+        gap: 4px;
+        font-size: 0.8rem;
+        cursor: pointer;
+        background: rgb(2, 2, 83);
+        color: white;
+
+        &:hover {
+          background: #000;
+        }
+
+        @include md {
+          font-size: 0.75rem;
+        }
+
+        @include sm {
+          font-size: 0.65rem;
+          padding: 5px;
+        }
+
+        span {
+          @include sm {
+            display: none;
+          }
+        }
+
+        img {
+          height: 15px;
+
+          @include sm {
+            height: 10px;
+          }
+        }
+      }
+
+      .rewards_sent {
+        background: green;
+
+        &:hover {
+          background: green;
+        }
+      }
+    }
+
+    ul {
+      margin: 0 1rem;
+      list-style: none;
+
+      @include lg {
+        margin: 0 0.5remrem;
+      }
+
+      @include md {
+        margin: 0 0.2rem;
+      }
+
+      li {
+        // text-align: center;
+        background: whitesmoke;
+        .users_list {
+          font-size: 0.875rem;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-bottom: 1rem;
+
+          @include md {
+            font-size: 0.8rem;
+            justify-content: space-between;
+          }
+
+          @include sm {
+            font-size: 0.7rem;
+          }
+
+          .phone_gameName {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include sm {
+              flex: 1;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: flex-start;
+              gap: 3px;
+            }
+
+            .phone {
+              flex: 2;
+
+              span {
+                text-transform: capitalize;
+              }
+            }
+
+            .phone,
+            .gameName {
+              @include md {
+                font-size: 0.65rem;
+                // flex: 1;
+              }
+            }
+
+            .gameName {
+              //   margin: 0 auto;
+              flex: 1;
+              text-align: center;
+              font-weight: 400;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 2px;
+
+              span {
+                font-size: 0.7rem;
+
+                @include md {
+                  font-size: 0.6rem;
+                }
+              }
+
+              @include sm {
+                margin-left: 0;
+                font-weight: 400;
+                font-size: 0.6rem;
+                flex-direction: row;
+              }
+            }
+          }
+
+          .winning_button {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include sm {
+              margin: 0 auto;
+            }
+
+            @include xsm {
+              flex-direction: column-reverse;
+              align-items: flex-end;
+              justify-content: flex-end;
+              gap: 3px;
+            }
+
+            .winning_points {
+              //   margin-right: auto;
+              flex: 2;
+              text-align: center;
+              display: flex;
+              flex-direction: column-reverse;
+              gap: 2px;
+              align-items: center;
+              font-size: 0.7rem;
+
+              span {
+                font-size: 0.875rem;
+
+                @include md {
+                  font-size: 0.7rem;
+                }
+
+                @include xsm {
+                  font-size: 0.6rem;
+                }
+              }
+
+              .equal {
+                display: none;
+
+                @include xsm {
+                  display: block;
+                }
+              }
+
+              @include md {
+                font-size: 0.6rem;
+                flex: 1;
+              }
+
+              @include sm {
+                //
+                font-size: 0.6rem;
+                text-align: left;
+              }
+
+              @include xsm {
+                flex-direction: row;
+                margin: 0;
+                font-size: 0.55rem;
+              }
+            }
+
+            button {
+              display: flex;
+              align-items: center;
+              padding: 8px;
+              margin: 0;
+              border-radius: 3px;
+              outline: none;
+              border: none;
+              gap: 4px;
+              font-size: 0.8rem;
+              cursor: pointer;
+              background: green;
+              color: white;
+
+              &:hover {
+                background: #000;
+              }
+
+              @include md {
+                font-size: 0.75rem;
+              }
+
+              @include sm {
+                font-size: 0.65rem;
+                padding: 5px;
+              }
+
+              img {
+                height: 15px;
+
+                @include sm {
+                  height: 10px;
+                }
+              }
+            }
+
+            .rewards_sent {
+              background: rgb(2, 2, 83);
+
+              &:hover {
+                background: rgb(2, 2, 83);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+.users {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  .user_title {
+    flex: 1;
+    // margin-bottom: 1.5rem;
+  }
+
+  .different_users_details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    flex: 1;
+    margin-bottom: 1.5rem;
+
+    .users_number {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 400;
+
+      .users_number_type {
+        font-size: 0.875rem;
+        transition: all 0.3s;
+
+        &:hover {
+          color: rgb(244, 159, 3);
+        }
+        // color: rgb(227, 214, 214);
+      }
+    }
+  }
+
+  .users_list {
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .all_users {
+      font-size: 0.8rem;
+      font-weight: 500;
+
+      &:hover {
+        color: black;
+      }
+    }
+
+    .users_icon {
+      margin-top: 5px;
+      background: rgb(230, 213, 213);
+      padding: 1px 2px;
+      color: black;
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

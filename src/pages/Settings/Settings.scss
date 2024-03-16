@@ -1,0 +1,46 @@
+@import "../../styles/responsive.scss";
+
+.setting {
+  h2 {
+    margin-bottom: 1rem;
+  }
+  .setting_mainContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .setting_subContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #000;
+      padding: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      h4 {
+        font-weight: 400;
+        @include xsm {
+          font-size: 0.875rem;
+        }
+      }
+
+      .arrow_icon {
+        font-size: medium;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      &.rotate-icon {
+        .arrow_icon {
+          transform: rotate(90deg);
+        }
+      }
+
+      &:hover {
+        background: #fff;
+        color: black;
+      }
+    }
+  }
+}

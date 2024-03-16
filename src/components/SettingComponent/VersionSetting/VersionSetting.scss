@@ -1,0 +1,147 @@
+@import "../../../styles/responsive.scss";
+
+.version_setting {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .user_side_container {
+    background: #fff;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+
+    h4 {
+      color: gray;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    .version_data {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      margin: 2rem 0;
+
+      p {
+        color: gray;
+        font-size: 0.875rem;
+        font-weight: 500;
+
+        @include sm {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+
+  .second_container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+
+    @include sm {
+      flex-direction: column;
+      width: auto;
+      gap: 10px;
+    }
+
+    .update_container,
+    .admin_container {
+      h4 {
+        margin-bottom: 2rem;
+        color: gray;
+        font-size: 0.875rem;
+        font-weight: 600;
+
+        @include sm {
+          margin-bottom: 1.5rem;
+        }
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .input_form {
+          position: relative;
+          width: 100%;
+          label {
+            font-size: 0.65rem;
+            color: gray;
+            position: absolute;
+            top: -7px;
+            z-index: 555;
+            left: 10px;
+            background-color: white;
+          }
+          input {
+            padding: 12px;
+            border: 1px solid rgb(216, 206, 206);
+            outline: none;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            width: 100%;
+          }
+        }
+
+        button {
+          padding: 12px;
+          border: none;
+          color: #fff;
+          outline: none;
+          font-size: 0.875rem;
+          font-weight: 400;
+          border-radius: 3px;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            background: #000;
+          }
+        }
+      }
+    }
+
+    .update_container {
+      flex: 1;
+      background: #fff;
+      color: black;
+      padding: 30px;
+      border-radius: 5px;
+
+      @include sm {
+        flex: 0;
+        width: 100%;
+      }
+
+      @include xsm {
+        padding: 20px;
+      }
+
+      button {
+        background: rgb(116, 20, 206);
+      }
+    }
+
+    .admin_container {
+      flex: 1;
+      background: #fff;
+      color: black;
+      padding: 30px;
+      border-radius: 5px;
+
+      @include sm {
+        flex: 0;
+        width: 100%;
+      }
+
+      @include xsm {
+        padding: 20px;
+      }
+      button {
+        background: rgb(219, 20, 20);
+      }
+    }
+  }
+}

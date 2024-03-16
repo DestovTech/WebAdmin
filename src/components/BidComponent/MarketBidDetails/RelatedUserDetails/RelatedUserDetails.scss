@@ -1,0 +1,75 @@
+@import "../../../../styles/variables.scss";
+@import "../../../../styles/responsive.scss";
+
+.details_container {
+  width: 100vw;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.724);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  overflow-x: hidden;
+
+  .modal {
+    width: 45%;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    color: black;
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    @include md {
+      width: 80%;
+    }
+
+    @include sm {
+      width: 90%;
+      padding: 20px;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .userDetails_header {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .details_main_container {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 1rem;
+
+      .user_details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.875rem;
+
+        .userName_num {
+          @include xsm {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+
+        .username {
+          text-transform: capitalize;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

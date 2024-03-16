@@ -1,0 +1,443 @@
+@import "../../../styles/responsive.scss";
+@import "../../../styles/variables.scss";
+
+.paymentSetting {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  //   grid-auto-rows: minmax(50px, auto);
+  grid-auto-flow: dense;
+  gap: 10px;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  //   .first_container {
+  //     grid-column: span 2;
+  //     display: grid;
+  //     grid-template-columns: repeat(1, 1fr);
+  //     // grid-auto-rows: minmax(50px, auto);
+  //     // grid-auto-flow: dense;
+  //     gap: 10px;
+
+  //     // @include md {
+  //     // }
+
+  .first_container {
+    grid-column: span 2;
+    // grid-row: span 1;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: #fff;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+
+    @include md {
+      grid-column: span 2;
+    }
+
+    @include xsm {
+      padding: 20px;
+    }
+
+    .general_setting_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+
+      h4 {
+        font-size: 0.9rem;
+        color: gray;
+      }
+
+      .edit_icon {
+        font-size: medium;
+        cursor: pointer;
+      }
+    }
+
+    .whatsapp_num {
+      display: flex;
+      align-items: center;
+      background: rgb(225, 213, 213);
+      border-radius: 5px;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+
+      span {
+        background: #000;
+        color: #fff;
+        font-size: 0.7rem;
+        padding: 8px 12px;
+        border-radius: 5px;
+        width: 80px;
+        text-align: center;
+
+        @include xsm {
+          width: 80px;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .payment_setting {
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      .payment_setting_header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h4 {
+          font-size: 0.9rem;
+          color: gray;
+        }
+
+        .edit_icon {
+          font-size: medium;
+          cursor: pointer;
+        }
+      }
+
+      .auto_payment_setting {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+          color: gray;
+          font-size: 0.875rem;
+        }
+      }
+
+      .min_amount {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .min_deposit,
+        .min_withdraw {
+          text-align: center;
+          margin-top: 0.5rem;
+
+          p {
+            color: gray;
+            font-size: 0.8rem;
+          }
+          span {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .fourth_container {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: #fff;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+
+    @include xsm {
+      padding: 20px;
+    }
+
+    .default_upi {
+      margin-bottom: 0.5rem;
+      h4 {
+        font-size: 0.9rem;
+        color: gray;
+      }
+
+      .default_upi_id {
+        margin-top: 0.5rem;
+        background: rgb(225, 213, 213);
+        padding: 8px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+      }
+    }
+
+    .upi_ids_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      h4 {
+        font-size: 0.9rem;
+        color: gray;
+      }
+
+      button {
+        border: none;
+        outline: none;
+        padding: 8px;
+        border-radius: 3px;
+        background: #000;
+        color: #fff;
+        font-size: 0.7rem;
+        cursor: pointer;
+      }
+    }
+
+    .upi_id_container {
+      display: flex;
+      position: relative;
+
+      align-items: center;
+      gap: 3px;
+      .upi_id {
+        flex: 1;
+        font-size: 0.875rem;
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 5px;
+
+        @include sm {
+          font-size: 0.8rem;
+        }
+
+        @include xsm {
+          font-size: 0.7rem;
+        }
+
+        .default {
+          border: none;
+          outline: none;
+          padding: 5px 8px;
+          border-radius: 3px;
+          background: rgb(50, 181, 50);
+          color: #fff;
+          font-size: 0.7rem;
+          font-weight: 600;
+          cursor: pointer;
+          position: absolute;
+          right: 1.5rem;
+          top: -8px;
+
+          @include xsm {
+            font-size: 0.5rem;
+          }
+        }
+
+        .set_as_default {
+          border: none;
+          outline: none;
+          padding: 5px 8px;
+          border-radius: 3px;
+          background: #000;
+          color: #fff;
+          font-size: 0.7rem;
+          font-weight: 500;
+          cursor: pointer;
+          position: absolute;
+          right: 1.5rem;
+          top: -8px;
+
+          @include xsm {
+            font-size: 0.5rem;
+          }
+        }
+      }
+
+      .delete_icon {
+        height: 1.1rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//editGeneral
+
+.edit_general {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.724);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  overflow-x: hidden;
+
+  .modal {
+    width: 40%;
+    padding: 40px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    color: black;
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    @include md {
+      width: 80%;
+      padding: 30px;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+
+      @include sm {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+
+      @include xsm {
+        font-size: 0.875rem;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 1.2rem;
+
+        @include sm {
+          margin-bottom: 0.5rem;
+        }
+
+        label {
+          font-size: 16px;
+          font-weight: 500;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          @include sm {
+            font-size: 14px;
+          }
+        }
+
+        input {
+          padding: 10px;
+          background: transparent;
+          color: black;
+          border: 1px solid $soft-color;
+          outline: none;
+          border-radius: 3px;
+        }
+      }
+
+      button {
+        width: 100%;
+        background: #00cea8;
+        font-weight: 600;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background: rgb(14, 9, 1);
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.add_upi {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.724);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  overflow-x: hidden;
+
+  .modal {
+    width: 30%;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: aliceblue;
+    color: black;
+    position: relative;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    @include md {
+      width: 80%;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    h2 {
+      margin-bottom: 0.8rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        input {
+          padding: 10px;
+          background: transparent;
+          color: black;
+          border: 1px solid $soft-color;
+          outline: none;
+          border-radius: 3px;
+        }
+      }
+
+      button {
+        width: 100%;
+        background: #00cea8;
+        font-weight: 600;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+
+        &:hover {
+          background: rgb(14, 9, 1);
+          color: white;
+        }
+      }
+    }
+  }
+}

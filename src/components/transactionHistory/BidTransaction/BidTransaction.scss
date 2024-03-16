@@ -1,0 +1,105 @@
+@import "../../../styles/responsive.scss";
+
+.dataTable_bid {
+  .date-picker-container {
+    position: relative;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+
+    .date-pic {
+      display: flex;
+
+      .datePicker {
+        padding: 8px 3px;
+        width: 6.2rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: rgb(80, 76, 76);
+        border: 1px solid rgb(169, 160, 160);
+        border-radius: 3px;
+        outline: none;
+      }
+
+      .calendar {
+        position: absolute;
+        left: 5rem;
+        top: 0.4rem;
+        z-index: 1;
+        color: black;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .dataGrid_bid {
+    background-color: white;
+    padding: 15px;
+    width: 83vw;
+
+    @include md {
+      width: auto;
+      padding: 10px;
+    }
+
+    .MuiDataGrid-cell {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    // .MuiDataGrid-cell--withRenderer {
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    // }
+  }
+
+  .MuiDataGrid-columnHeaderDraggableContainer {
+    background-color: rgb(250, 169, 18);
+    height: 2.5rem !important;
+    border-radius: 3px;
+
+    text-align: center;
+    // padding-left: 12px;
+
+    .MuiDataGrid-columnHeaderTitleContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .MuiDataGrid-columnHeaderTitle {
+        font-weight: 600;
+      }
+
+      .MuiDataGrid-iconButtonContainer {
+        display: none;
+      }
+    }
+
+    .MuiDataGrid-menuIcon {
+      display: none;
+    }
+  }
+
+  .MuiDataGrid-toolbarContainer {
+    flex-direction: row-reverse;
+  }
+
+  .MuiFormControl-root {
+    display: none;
+  }
+}
+
+.add_points {
+  color: rgb(18, 191, 133);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.points {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}

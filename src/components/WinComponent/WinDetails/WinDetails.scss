@@ -1,0 +1,86 @@
+@import "../../../styles/responsive.scss";
+
+.win_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+
+  h2 {
+    @include sm {
+      font-size: 1.2rem;
+    }
+    @include xsm {
+      font-size: 1rem;
+    }
+  }
+  h4 {
+    @include sm {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    @include xsm {
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.userName {
+  text-transform: capitalize;
+}
+
+.back_button {
+  background: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.filter_option_input {
+  position: relative;
+  text-align: right;
+  margin-bottom: 1rem;
+
+  .filter_icon {
+    color: black;
+    position: absolute;
+    top: 2.5px;
+    right: 0.5rem;
+  }
+  .select_filter_option {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 4px 0 4px 4px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 5rem;
+    font-size: 13px;
+    font-weight: 500;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .filter_option {
+    // text-align: center;
+    background-color: #fff;
+    color: black;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 15px;
+    // height: fit-content;
+
+    @include md {
+      font-size: 8px;
+      font-weight: 500;
+    }
+  }
+}

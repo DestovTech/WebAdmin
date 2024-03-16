@@ -1,0 +1,97 @@
+@import "../../styles/variables.scss";
+@import "../../styles/responsive.scss";
+
+.home {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  grid-auto-rows: minmax(140px, auto);
+  grid-auto-flow: dense;
+
+  @include xl {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include sm {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @include sm {
+    grid-auto-rows: minmax(140px, auto);
+  }
+
+  .box {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .box1 {
+    grid-column: span 1;
+    // background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
+    grid-row: span 2;
+    border: 2px solid #7b7b7b;
+  }
+
+  .box3 {
+    background: linear-gradient(to right, rgb(19, 19, 237), rgb(1, 1, 132));
+  }
+
+  .box4 {
+    background-image: linear-gradient(to right, #ff512f, #f09819);
+  }
+
+  .box5 {
+    grid-column: span 1;
+    grid-row: span 1;
+    background: linear-gradient(to right, rgb(19, 19, 237), rgb(1, 1, 132));
+  }
+
+  .box2 {
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+  }
+
+  .box6 {
+    // background-image: linear-gradient(to right, #07cbb7, #4db6ac);
+    background-image: linear-gradient(to right, #bf0505, #f11712);
+  }
+
+  .box7 {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: linear-gradient(to right, rgb(19, 19, 237), rgb(1, 1, 132));
+
+    @include md {
+      display: none;
+    }
+  }
+
+  .box8 {
+    background-image: linear-gradient(to right, #bf0505, #f11712);
+  }
+
+  .box9 {
+    border: 2px solid #7b7b7b;
+  }
+
+  .sub_box {
+    border: 2px solid $soft-color;
+  }
+
+  .box10 {
+    grid-column: span 2;
+    // background: linear-gradient(90deg, #1cb5e0 0%, #000851 100%);
+    grid-row: span 2;
+    border: 2px solid #7b7b7b;
+    // width: fit-content;
+
+    @include sm {
+      grid-column: span 1;
+      overflow-x: auto;
+    }
+  }
+}
